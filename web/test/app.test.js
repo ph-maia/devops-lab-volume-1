@@ -22,7 +22,7 @@ describe('App Integration Test', () => {
         moxios.stubRequest(requestUrl, {
             status: 200,
             response: {
-                message: 'Aplicação - DevOps Mercurianos!'
+                message: 'Aplicação - DevOps Marcianos!'
             }
         });
 
@@ -33,8 +33,8 @@ describe('App Integration Test', () => {
 
         // Assert
         assert.equal(response.status, 200);
-        assert.ok(response.text.includes('color: black'));
-        assert.ok(response.text.includes('<h1>Aplicação - DevOps Mercurianos!</h1>'));
+        assert.ok(response.text.includes('color: grey'));
+        assert.ok(response.text.includes('<h1>Aplicação - DevOps Marcianos!</h1>'));
     });
 
     it('Should return npm a page with an error in title message', async () => {
@@ -50,7 +50,7 @@ describe('App Integration Test', () => {
 
         // Assert
         assert.equal(response.status, 200);
-        assert.ok(response.text.includes('color: red'));
+        assert.ok(response.text.includes('color: blue'));
         assert.ok(response.text.match(/<h1>Ocorreu um erro: .*<\/h1>/));
     });
 });
