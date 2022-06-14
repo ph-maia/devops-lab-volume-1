@@ -24,7 +24,7 @@ router.get('/', async (_req, res) => {
         message = `Ocorreu um erro: ${error.message}`;
     }
     
-    res.render('index', { title: 'Mercurianos', message, hasError });
+    res.render('index', { title: 'Marcianos', message, hasError });
 });
 
 // Definindo as configurações padrões da aplicação
