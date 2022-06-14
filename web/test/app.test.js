@@ -22,7 +22,7 @@ describe('App Integration Test', () => {
         moxios.stubRequest(requestUrl, {
             status: 200,
             response: {
-                message: 'Seja redirecionado ao <a href="https://www.youtube.com/watch?v=MTbF9ALViJw&ab_channel=LucasFernando">Marcianos</a>'
+                message: '<p>Seja redirecionado ao <a href="https://www.youtube.com/watch?v=MTbF9ALViJw&ab_channel=LucasFernando">Marcianos</a></p>'
                 // message: 'Aplicação - DevOps Marcianos!'
             }
         });
