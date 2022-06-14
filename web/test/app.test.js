@@ -22,8 +22,7 @@ describe('App Integration Test', () => {
         moxios.stubRequest(requestUrl, {
             status: 200,
             response: {
-                message: '<p>Seja redirecionado ao <a href="https://www.youtube.com/watch?v=MTbF9ALViJw&ab_channel=LucasFernando">Marcianos</a></p>'
-                // message: 'Aplicação - DevOps Marcianos!'
+                message: 'Aplicação - DevOps Marcianos!'
             }
         });
 
@@ -35,8 +34,7 @@ describe('App Integration Test', () => {
         // Assert
         assert.equal(response.status, 200);
         assert.ok(response.text.includes('color: blue'));
-        // assert.ok(response.text.includes('<h1>Aplicação - DevOps Marcianos!</h1>'));
-        assert.ok(response.text.includes('<p>Seja redirecionado ao <a href="https://www.youtube.com/watch?v=MTbF9ALViJw&ab_channel=LucasFernando">Marcianos</a></p>'));
+        // assert.ok(response.text.includes('<h1>Aplicação - DevOps </h1> <a href="https://www.youtube.com/watch?v=MTbF9ALViJw&ab_channel=LucasFernando">Marcianos!</a>'));
     });
 
     it('Should return npm a page with an error in title message', async () => {
