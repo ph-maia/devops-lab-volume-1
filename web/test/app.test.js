@@ -34,7 +34,7 @@ describe('App Integration Test', () => {
         // Assert
         assert.equal(response.status, 200);
         assert.ok(response.text.includes('color: blue'));
-        // assert.ok(response.text.includes('<h1>Aplicação - DevOps </h1> <a href="https://www.youtube.com/watch?v=MTbF9ALViJw&ab_channel=LucasFernando">Marcianos!</a>'));
+        // assert.ok(response.text.includes('<h1>Aplicação - DevOps <a href="https://www.youtube.com/watch?v=MTbF9ALViJw&ab_channel=LucasFernando">Marcianos!</a> </h1>'));
     });
 
     it('Should return npm a page with an error in title message', async () => {
